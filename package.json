@@ -1,0 +1,45 @@
+{
+  "name": "koalunch-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Koalunch – daily lunch menu aggregator for Brno restaurants",
+  "keywords": ["mcp", "koalunch", "lunch", "menu", "brno", "restaurants"],
+  "homepage": "https://www.koalunch.cz",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kozubikmichal/koalunch-mcp"
+  },
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "koalunch-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.stdio.json",
+    "build:next": "next build",
+    "dev": "tsc -p tsconfig.stdio.json --watch",
+    "dev:next": "next dev",
+    "start": "node dist/index.js",
+    "start:next": "next start",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.10.2",
+    "mcp-handler": "^1.1.0",
+    "next": "^15.3.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.0.0",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
